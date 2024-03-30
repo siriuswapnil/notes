@@ -1,0 +1,73 @@
+site_name: Swapnil's Programming Notes
+site_url: https://notes.swapnil.fyi/
+copyright: <a href="https://github.com/siriuswapnil"  target="_blank" rel="noopener">Swapnil Sinha</a>
+repo_name: siriuswapnil/notes
+repo_url: https://github.com/siriuswapnil/notes
+edit_uri: edit/main/docs/
+docs_dir: ./docs
+site_dir: ./site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: purple
+  shortcuts:
+    next: 78 # n
+    previous: 80 # p
+    search: 83 # s
+  language: en
+  include_search_page: true
+  search_index_only: true
+  features:
+    - navigation.instant
+    - search.share
+    - search.highlight
+    - search.suggest
+  font:
+    text: Noto Sans
+    code: IMB Plex Mono
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      prebuild_index: python
+      lang:
+        - en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/siriuswapnil
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/wokeEngineer
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/swapnil-sinha
+    - icon: fontawesome/brands/spotify
+      link: https://open.spotify.com/user/nkudjc37142y5xce3rph8k8dh?si=f251b55ce2614f29
+
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - meta
+  - attr_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
